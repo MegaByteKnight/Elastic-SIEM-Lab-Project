@@ -47,7 +47,7 @@ In this project, I set up an Elastic SIEM environment using Elastic Cloud and a 
 Include screenshots of dashboards and alert configurations to showcase the lab setup.
 
 - **Dashboard Overview**
-
+<img a images/Custom Dashboard.jpg
 - **Nmap Scan Visualization**
 
 - **System Performance Monitoring**
