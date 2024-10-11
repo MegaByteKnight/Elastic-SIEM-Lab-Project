@@ -18,67 +18,52 @@ In this project, I set up an Elastic SIEM environment using Elastic Cloud and a 
 ## Setup and Configuration
 
 ### 1. Elastic Cloud Setup
-- Created a free Elastic Cloud account.
-- Deployed Elasticsearch and Kibana on Elastic Cloud.
-- Configured the deployment for security event monitoring.
+- Created a free Elastic Cloud account and deployed Elasticsearch and Kibana.
+- Configured Elastic Cloud for security event monitoring.
+
+![Virtual Box Setup](https://github.com/MegaByteKnight/Elastic-SIEM-Lab-Project/blob/main/images/Virtualbox%20Kali.jpg)
 
 ### 2. Kali Linux VM Setup
-- Set up Kali Linux in VirtualBox.
-- Verified network connectivity and updated the system.
+- Set up Kali Linux in VirtualBox, verified network connectivity, and updated the system.
 
 ### 3. Elastic Agent (Elastic Defend) Configuration
-- Installed Elastic Agent on the Kali VM to collect and forward logs.
-- Verified the agent was running and forwarding data to Elastic SIEM.
-- Monitored system logs and security events in real-time.
+- Installed Elastic Agent on the Kali VM for log collection.
+- Verified that logs were forwarded to Elastic SIEM in real-time.
+
+![Kali Elastic Defend Install](https://github.com/MegaByteKnight/Elastic-SIEM-Lab-Project/blob/main/images/Kali%20elastic%20defend%20install.jpg)
 
 ### 4. Generating Security Events
-- Used Nmap to generate network scan logs, simulating common security events.
-- Executed multiple Nmap scans to trigger alerts for open ports and services.
+- Used Nmap to simulate network scans and generate log data.
+- Executed multiple Nmap scans to detect open ports and services.
+
+![ip and sudo nmap](https://github.com/MegaByteKnight/Elastic-SIEM-Lab-Project/blob/main/images/nmap.jpg)
 
 ### 5. Monitoring with Kibana
-- Created custom dashboards in Kibana to visualize system activity and Nmap scan logs.
+- Created custom dashboards in Kibana to visualize system logs and Nmap scan data.
 - Set up visualizations for login attempts, network activity, and system performance.
 
+![Standard Dashboard](https://github.com/MegaByteKnight/Elastic-SIEM-Lab-Project/blob/main/images/Custom%20Dashboard1.jpg)
+![Custom Dashboard for rules](https://github.com/MegaByteKnight/Elastic-SIEM-Lab-Project/blob/main/images/Custom%20Dashboard2.jpg)
+
 ### 6. Creating Alerts
-- Configured alerts within Kibana to trigger based on security events, such as Nmap scans.
-- Set up notifications for specific event triggers.
+- Configured Kibana to trigger alerts based on specific security events (e.g., Nmap scans, sudo commands).
+- Set up email notifications for alerts triggered by suspicious activity.
 
-## Screenshots
-Include screenshots of dashboards and alert configurations to showcase the lab setup.
-
-- **Dashboard Overview**
-<img a images/Custom Dashboard.jpg
-- **Nmap Scan Visualization**
-
-- **System Performance Monitoring**
-
+![Rule creation in Elastic](https://github.com/MegaByteKnight/Elastic-SIEM-Lab-Project/blob/main/images/Elastic%20Rule%20creation.jpg)
 
 ## Challenges Faced
-- Configuring the Elastic Agent on Kali Linux to communicate with Elastic Cloud.
-- Monitoring delays in event logs appearing on the Elastic Cloud console.
+- Configuring the Elastic Agent to communicate with Elastic Cloud.
+- Handling delays in event logs appearing on the Elastic console.
 
 ## Lessons Learned
-- Gained practical experience setting up and configuring Elastic SIEM.
-- Learned how to visualize logs and create meaningful dashboards for security monitoring.
-- Improved understanding of Elastic Defend and its capabilities for threat detection.
+- Practical experience setting up Elastic SIEM and Elastic Defend.
+- Creating meaningful security dashboards using Kibana.
+- Gained an understanding of Elastic’s alerting capabilities for incident detection.
 
 ## Future Enhancements
-- Experiment with more advanced detection rules in Kibana.
-- Integrate additional data sources, such as Windows event logs.
-- Automate responses to certain security alerts using Elastic's action framework.
-
-## How to Reproduce This Lab
-
-### Set Up the Environment
-- Set up a Kali Linux VM in VirtualBox.
-- Create an Elastic Cloud account and configure the SIEM environment.
-
-### Install and Configure Elastic Agent
-- Install Elastic Agent on the Kali VM.
-- Ensure logs are being forwarded to the Elastic Cloud SIEM.
-
-### Visualize and Monitor Data
-- Use Kibana to create custom dashboards and set up security alerts.
+- Implement more advanced detection rules for specific attack vectors.
+- Integrate logs from other sources like Windows event logs.
+- Automate responses to specific alerts using Elastic's action framework.
 
 ## References
 - Elastic Stack Official Documentation
@@ -86,4 +71,4 @@ Include screenshots of dashboards and alert configurations to showcase the lab s
 - Nmap Documentation
 
 ## Conclusion
-Completing this Elastic SIEM lab helped deepen my understanding of real-time security monitoring and incident detection. By working with Elastic Defend and Kibana, I learned how to create meaningful visualizations and alerts, which are essential for modern security operations.
+Completing this lab deepened my understanding of real-time security monitoring using Elastic Defend and Kibana. This hands-on project enhanced my ability to create dashboards, analyze logs, and configure security alerts in a real-world SIEM environment.
